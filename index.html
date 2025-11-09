@@ -34,6 +34,7 @@
         * {
             margin: 0;
             padding: 0;
+            position:relative;
             box-sizing: border-box;
         }
 
@@ -74,7 +75,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index:1 ;
             background: white;
             border: 3px solid var(--gold);
             border-radius: 50%;
@@ -186,7 +187,7 @@
             left: 12px;
             right: 12px;
             bottom: 12px;
-            border: 3px double var(--gold);
+            /* border: 3px double var(--gold); */
             border-radius: 8px;
             pointer-events: none;
         }
@@ -224,10 +225,16 @@
 
         .letter {
             padding: 50px 40px;
-            position: relative;
             max-height: 85vh;
+            max-width: 90%;
+            margin: 30px auto;
             overflow-y: auto;
+            z-index: 1;
+            scroll-behavior: smooth;
+            border: 3px double var(--gold);
+            border-radius: 10px;
         }
+
 
         .letter-header {
             text-align: center;
@@ -740,7 +747,7 @@
         }
 
         .letter::-webkit-scrollbar {
-            width: 8px;
+            width: 1px;
         }
 
         .letter::-webkit-scrollbar-track {
@@ -782,8 +789,12 @@
                             <div class="seal-year">2025</div>
                             <div class="seal-text">Graduate</div>
                         </div>
+  <div class="overlay">
 
+
+                            </div>
                         <div class="letter" id="letter">
+                          
                             <div class="letter-header">
                                 <svg class="graduation-icon" viewBox="0 0 24 24">
                                     <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
